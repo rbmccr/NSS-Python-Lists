@@ -24,3 +24,14 @@ print('Rocky Planets', rocky_planets)
 del(planet_list[8])
 del(rocky_planets[-1]) # same as del
 print(planet_list, rocky_planets)
+
+# Challenge ----------------------------
+
+# Create another list containing tuples. Each tuple will hold the name of a spacecraft that we have launched, and the names of the planet(s) that it has visited, or landed on. (e.g. ('Cassini', 'Saturn')).
+spacecraft = [('Cassini', 'Saturn'),('Voyager', 'Jupiter'),('Curiosity','Mars')]
+
+# Iterate over your list of planets, and inside that loop, iterate over the list of tuples. Print, for each planet, which satellites have visited it.
+for planet in planet_list:
+  for item in spacecraft:
+    if item[1] == planet:
+      print(item[0] + ' visited ' + planet)
